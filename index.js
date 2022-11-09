@@ -15,6 +15,7 @@ function saveFile(files, callback) {
     console.log("__dirname", __dirname);
     if (!file) {
         callback("不是文件!");
+        return;
     }
     let savePath = path.resolve(__dirname, `./src/${file.originalFilename}`);
     console.log("savePath==>>>", savePath);
@@ -48,7 +49,8 @@ app.all("*", function (req, res, next) {
 });
 
 app.get("/", function (req, res) {
-    res.send("Hello World!");
+    // res.send("Hello World!");
+    res.sendFile(__dirname + "/" + "index.html");
 });
 
 app.get("/src/*.jpg", function (req, res) {
