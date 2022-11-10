@@ -53,7 +53,7 @@ app.get("/", function (req, res) {
     res.sendFile(__dirname + "/" + "index.html");
 });
 
-app.get("/src/*.jpg", function (req, res) {
+app.get("/static/*.jpg", function (req, res) {
     res.sendFile(__dirname + "/" + req.url);
 });
 

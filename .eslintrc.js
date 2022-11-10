@@ -12,7 +12,8 @@ module.exports = {
     overrides: [],
     // parser: "@typescript-eslint/parser",
     parserOptions: {
-        ecmaVersion: "latest"
+        ecmaVersion: "latest",
+        sourceType: "module"
     },
     // plugins: ["@typescript-eslint"],
     rules: {
